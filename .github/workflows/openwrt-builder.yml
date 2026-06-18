@@ -85,7 +85,7 @@ jobs:
         cd openwrt
         export TERM=linux
         if [ -f .config ]; then
-          make oldconfig
+          make olddefconfig
         else
           make defconfig
           make olddefconfig
