@@ -26,3 +26,6 @@ echo "CONFIG_OPENSSL_WITH_DTLS=y" >> .config
 # 清理可能已失败的 OpenSSL 和 ustream-ssl 编译缓存
 make package/libs/openssl/clean
 make package/libs/ustream-ssl/clean
+
+# 自动配置，避免交互界面
+make olddefconfig
