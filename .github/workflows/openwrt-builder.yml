@@ -85,9 +85,10 @@ jobs:
         cd openwrt
         export TERM=linux
         if [ -f .config ]; then
-          make oldconfig < /dev/null
+          make oldconfig
         else
-          make defconfig < /dev/null
+          make defconfig
+          make olddefconfig
         fi
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
