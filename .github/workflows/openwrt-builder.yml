@@ -88,7 +88,12 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: Build host tools
+      run: |
+        cd openwrt
+        make tools/install
+    
     - name: Compile the firmware
       id: compile
       run: |
