@@ -24,5 +24,5 @@ echo "CONFIG_PACKAGE_libopenssl=y" >> .config
 echo "CONFIG_OPENSSL_WITH_DTLS=y" >> .config
 
 # 清理可能已失败的 OpenSSL 和 ustream-ssl 编译缓存
-make package/libs/openssl/clean
-make package/libs/ustream-ssl/clean
+#make package/libs/openssl/clean
+#make package/libs/ustream-ssl/clean
