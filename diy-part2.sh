@@ -22,6 +22,7 @@
 # 强制启用 OpenSSL（避免 .config 被覆盖）
 echo "CONFIG_PACKAGE_libopenssl=y" >> .config
 echo "CONFIG_OPENSSL_WITH_DTLS=y" >> .config
+echo "CONFIG_SIGNED_PACKAGES=n" >> .config
 
 # 清理可能已失败的 OpenSSL 和 ustream-ssl 编译缓存
 #make package/libs/openssl/clean
