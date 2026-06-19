@@ -93,7 +93,8 @@ jobs:
       run: |
         cd openwrt
         make tools/install
-    
+        make package/system/usign/compile
+        
     - name: Compile the firmware
       id: compile
       run: |
